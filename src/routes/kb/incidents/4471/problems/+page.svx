@@ -1,0 +1,50 @@
+---
+layout: runbook
+title: '#4471 · three problems, not one'
+owner: Matt Revell
+status: open
+reviewed: 2026-11-06
+signature: Matt Revell
+---
+
+<script>
+  import ProblemTable from '#lib/kb/ProblemTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+
+  const repo = 'https://github.com/MPRevell/support-kb-4471/issues/';
+  const issues = { parser: repo + '1', hint: repo + '2', shift: repo + '3' };
+</script>
+
+[#4471](/kb/incidents/4471) says "one issue, one fix queued". Its reports describe three problems.
+The parser fix that is queued solves only the first one.
+
+<Callout kind="warn">
+Do not close #4471's reports when the parser fix ships. The other two problems will still be there, and the
+reports are filed under the wrong cause.
+</Callout>
+
+## The problems
+
+<ProblemTable ticket={4471} {issues} />
+
+## How each report was placed
+
+1. **One id, one report.** The export pages overlap, so some reports come twice.
+2. **One-day moves first.** The desk's notes list reports whose date moved by one day, for example a
+   Lisbon client who got Tuesday and a Toronto client who got Monday for the same meeting. A month/day
+   swap never does that. These reports are `shift`.
+3. **The rest by tenant, not by intake tag** (`causeOf` in `#lib/kb/causes`). Every tenant on file writes
+   the day first. A report sent through a booking-v3 form, which prints `MM/DD/YYYY` under its date field,
+   is `hint`. Everything else is `parser`.
+
+The intake tag is a guess from the reporter's browser. It disagrees with the tenant in both directions,
+so it does not count reports.
+
+## Why it was one ticket
+
+Decision [0001](/kb/decisions/0001-dedupe-by-subject) merges on the subject line. A subject says what
+the reporter saw ("wrong day on the invite"), never why, so all three problems landed in #4471. The #4471 table counts the one-day moves as
+`parser`, and it shows `hint` as "no ticket of its own". Each problem now has its own ticket, linked above.
+
+<RenderStamp {signature} />
