@@ -30,13 +30,15 @@ reports are filed under the wrong cause.
 
 ## How each report was placed
 
+The counts are the desk's own view, as #4471's table builds it from the export:
+
 1. **One id, one report.** The export pages overlap, so some reports come twice.
-2. **One-day moves first.** The desk's notes list reports whose date moved by one day, for example a
-   Lisbon client who got Tuesday and a Toronto client who got Monday for the same meeting. A month/day
-   swap never does that. These reports are `shift`.
-3. **The rest by tenant, not by intake tag** (`causeOf` in `#lib/kb/causes`). Every tenant on file writes
-   the day first. A report sent through a booking-v3 form, which prints `MM/DD/YYYY` under its date field,
-   is `hint`. Everything else is `parser`.
+2. **By tenant, not by intake tag** (`causeOf` in `#lib/kb/causes`). Every tenant on file writes the day
+   first. A report sent through a booking-v3 form, which prints `MM/DD/YYYY` under its date field, is
+   `hint`. Everything else is `parser`.
+3. **One-day moves.** The desk's notes list reports whose date moved by one day, for example a Lisbon
+   client who got Tuesday and a Toronto client who got Monday for the same meeting. A month/day swap never
+   does that, so they are `shift`. Following the desk's rule, they stay counted where they are filed.
 
 The intake tag is a guess from the reporter's browser. It disagrees with the tenant in both directions,
 so it does not count reports.
