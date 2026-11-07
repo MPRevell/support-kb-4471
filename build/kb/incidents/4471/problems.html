@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../../../_app/immutable/entry/start.BZnHSVkm.js" rel="modulepreload">
+    <link href="../../../_app/immutable/entry/start.aA4XwE5D.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/WgfOfNfE.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/LfNkMfo5.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/efHmPjXU.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CZomEjWq.js" rel="modulepreload">
-		<link href="../../../_app/immutable/entry/app.Cuy9wJJK.js" rel="modulepreload">
+		<link href="../../../_app/immutable/entry/app.CLhE7GkC.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DZni_WYU.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BMv-2JeR.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DQhTBKxc.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DL3LuOT-.js" rel="modulepreload">
 		<link href="../../../_app/immutable/nodes/0.Dqsao82p.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BRmqMdvF.js" rel="modulepreload">
-		<link href="../../../_app/immutable/nodes/5.DROHb8bS.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/DHbsPx8e.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/5.Bx0tNkX7.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/B70GuHZs.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CCdwa9zY.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/DZqXfhuf.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/iXLSwIXB.js" rel="modulepreload">
@@ -24,9 +24,9 @@
 		<link href="../../../_app/immutable/assets/Callout.yLErXQDM.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/5.g0lZtfBM.css" rel="stylesheet">
   </head>
-  <body><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · three problems, not one</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Matt Revell</b></span> <span class="status open svelte-e2jw2j">open</span> <span class="svelte-e2jw2j">reviewed 2026-11-06 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> says “one issue, one fix queued”. Its reports describe three problems.
+  <body><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · three problems, not one</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Matt Revell</b></span> <span class="status closed svelte-e2jw2j">closed</span> <span class="svelte-e2jw2j">reviewed 2026-11-07 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> says “one issue, one fix queued”. Its reports describe three problems.
 The parser fix that is queued solves only the first one.</p> <aside class="warn svelte-17bri61"><!---->Do not close #4471's reports when the parser fix ships. The other two problems will still be there, and the
-reports are filed under the wrong cause.<!----></aside><!----> <h2>The problems</h2> <p class="sum svelte-1op6c6"><strong>412</strong> reports merged into #4471 · <strong>3</strong> problems</p> <table><thead><tr><th>problem</th><th>reports</th><th>tenants</th><th>seen</th><th>ticket</th></tr></thead><tbody><!--[--><tr><td><code>parser</code><br/><span class="what svelte-1op6c6">shared parser reads day-first dates month first: day and month swapped</span></td><td>379</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td><!--[0--><a href="https://github.com/MPRevell/support-kb-4471/issues/1">#1</a><!--]--></td></tr><tr><td><code>hint</code><br/><span class="what svelte-1op6c6">booking-v3 form hint says MM/DD/YYYY, the form reads the tenant’s day-first order</span></td><td>33</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td><!--[0--><a href="https://github.com/MPRevell/support-kb-4471/issues/2">#2</a><!--]--></td></tr><tr><td><code>shift</code><br/><span class="what svelte-1op6c6">date moved by one day (time zone / summer time), not a swap</span></td><td>5</td><td>5</td><td>2026-04-02 → 2026-10-04</td><td><!--[0--><a href="https://github.com/MPRevell/support-kb-4471/issues/3">#3</a><!--]--></td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-1op6c6">5 of the <code>parser</code> reports read as a one-day move; counted under <code>parser</code> by tenant, and again under <code>shift</code>.</p><!--]--><!--[-1--><!--]--><!--[-1--><!--]--><!--]--><!----> <h2>How each report was placed</h2> <p>The counts are the desk’s own view, as #4471’s table builds it from the export:</p> <ol><li><strong>One id, one report.</strong> The export pages overlap, so some reports come twice.</li> <li><strong>By tenant, not by intake tag</strong> (<code>causeOf</code> in <code>#lib/kb/causes</code>). Every tenant on file writes the day
+reports are filed under the wrong cause.<!----></aside><!----> <h2>The problems</h2> <p>All three tickets are closed: the desk finished its work on #4471.</p> <p class="sum svelte-1op6c6"><strong>412</strong> reports merged into #4471 · <strong>3</strong> problems</p> <table><thead><tr><th>problem</th><th>reports</th><th>tenants</th><th>seen</th><th>ticket</th></tr></thead><tbody><!--[--><tr><td><code>parser</code><br/><span class="what svelte-1op6c6">shared parser reads day-first dates month first: day and month swapped</span></td><td>379</td><td>11</td><td>2026-04-01 → 2026-10-04</td><td><!--[0--><a href="https://github.com/MPRevell/support-kb-4471/issues/1">#1</a><!--]--></td></tr><tr><td><code>hint</code><br/><span class="what svelte-1op6c6">booking-v3 form hint says MM/DD/YYYY, the form reads the tenant’s day-first order</span></td><td>33</td><td>3</td><td>2026-04-17 → 2026-09-22</td><td><!--[0--><a href="https://github.com/MPRevell/support-kb-4471/issues/2">#2</a><!--]--></td></tr><tr><td><code>shift</code><br/><span class="what svelte-1op6c6">date moved by one day (time zone / summer time), not a swap</span></td><td>5</td><td>5</td><td>2026-04-02 → 2026-10-04</td><td><!--[0--><a href="https://github.com/MPRevell/support-kb-4471/issues/3">#3</a><!--]--></td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-1op6c6">5 of the <code>parser</code> reports read as a one-day move; counted under <code>parser</code> by tenant, and again under <code>shift</code>.</p><!--]--><!--[-1--><!--]--><!--[-1--><!--]--><!--]--><!----> <h2>How each report was placed</h2> <p>The counts are the desk’s own view, as #4471’s table builds it from the export:</p> <ol><li><strong>One id, one report.</strong> The export pages overlap, so some reports come twice.</li> <li><strong>By tenant, not by intake tag</strong> (<code>causeOf</code> in <code>#lib/kb/causes</code>). Every tenant on file writes the day
 first. A report sent through a booking-v3 form, which prints <code>MM/DD/YYYY</code> under its date field, is <code>hint</code>. Everything else is <code>parser</code>.</li> <li><strong>One-day moves.</strong> The desk’s notes list reports whose date moved by one day, for example a Lisbon
 client who got Tuesday and a Toronto client who got Monday for the same meeting. A month/day swap never
 does that, so they are <code>shift</code>. Following the desk’s rule, they stay counted where they are filed.</li></ol> <p>The intake tag is a guess from the reporter’s browser. It disagrees with the tenant in both directions,
@@ -35,15 +35,15 @@ the reporter saw (“wrong day on the invite”), never why, so all three proble
 			
 			<script>
 				{
-					__sveltekit_1c54lbw = {
+					__sveltekit_vcl8pr = {
 						base: new URL("../../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.BZnHSVkm.js"),
-						import("../../../_app/immutable/entry/app.Cuy9wJJK.js")
+						import("../../../_app/immutable/entry/start.aA4XwE5D.js"),
+						import("../../../_app/immutable/entry/app.CLhE7GkC.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],

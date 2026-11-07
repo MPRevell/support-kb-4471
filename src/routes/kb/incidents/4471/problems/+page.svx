@@ -2,8 +2,8 @@
 layout: runbook
 title: '#4471 · three problems, not one'
 owner: Matt Revell
-status: open
-reviewed: 2026-11-06
+status: closed
+reviewed: 2026-11-07
 signature: Matt Revell
 ---
 
@@ -25,6 +25,8 @@ reports are filed under the wrong cause.
 </Callout>
 
 ## The problems
+
+All three tickets are closed: the desk finished its work on #4471.
 
 <ProblemTable ticket={4471} {issues} />
 
